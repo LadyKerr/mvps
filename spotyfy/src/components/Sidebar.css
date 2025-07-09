@@ -1,0 +1,142 @@
+.sidebar {
+  width: 240px;
+  background: #121212;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #333;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+.sidebar__header {
+  margin-bottom: 2rem;
+}
+
+.sidebar__title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.sidebar__nav {
+  flex: 1;
+}
+
+.sidebar__section {
+  margin-bottom: 2rem;
+}
+
+.sidebar__section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.sidebar__section-title {
+  color: #b3b3b3;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.sidebar__create-button {
+  background: none;
+  border: none;
+  color: #b3b3b3;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.sidebar__create-button:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar__nav-item,
+.sidebar__playlist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 0;
+  background: none;
+  border: none;
+  color: #b3b3b3;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.sidebar__nav-item:hover,
+.sidebar__playlist-item:hover {
+  color: white;
+}
+
+.sidebar__nav-item--active,
+.sidebar__playlist-item--active {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar__playlists {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sidebar__playlist-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebar__playlist-name {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.25rem;
+}
+
+.sidebar__playlist-count {
+  font-size: 0.75rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid #333;
+    padding: 1rem;
+  }
+  
+  .sidebar__nav {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .sidebar__section {
+    margin-bottom: 0;
+  }
+  
+  .sidebar__playlists {
+    display: none;
+  }
+}
